@@ -3,6 +3,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-image: url(/img/sewing-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: rgba(0,100,0,0.3)
 }
 
 .container {
@@ -11,7 +15,7 @@ body {
   width: 100vw;
 
   grid-template-columns: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 5vh 20vh 35vh 20vh 5vh 30vh 5vh;
+  grid-template-rows: 3.5em 13em 22em 13em 2.7em 18em 3.5em;
   gap: 1em 0px;
   grid-template-areas:
     "header header header"
@@ -53,13 +57,13 @@ body {
 }
 
 .testimonials {
-    grid-area: testimonials;
-    display: flex;
-    background-color: purple;
-  }
+  grid-area: testimonials;
+  display: flex;
+  background-color: purple;
+}
 
-  .footer {
-    grid-area: footer;
-    display: flex;
-    background-color: red;
-  }
+.footer {
+  grid-area: footer;
+  display: flex;
+  background-color: red;
+}
