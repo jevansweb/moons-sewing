@@ -1,0 +1,65 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 5vh 20vh 35vh 20vh 5vh 30vh 5vh;
+  gap: 1em 0px;
+  grid-template-areas:
+    "header header header"
+    ". title ."
+    ". services ."
+    ". about-us ."
+    ". learn-more ."
+    ". testimonials ."
+    "footer footer footer";
+}
+.header {
+  grid-area: header;
+  display: flex;
+  background-color: red;
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  background-color: grey;
+}
+
+.services {
+  grid-area: services;
+  display: flex;
+  background-color: #928bb7;
+}
+
+.about-us {
+  grid-area: about-us;
+  display: flex;
+  background-color: grey;
+}
+
+.learn-more {
+  grid-area: learn-more;
+  display: flex;
+  background-color: lightblue;
+}
+
+.testimonials {
+    grid-area: testimonials;
+    display: flex;
+    background-color: purple;
+  }
+
+  .footer {
+    grid-area: footer;
+    display: flex;
+    background-color: red;
+  }
