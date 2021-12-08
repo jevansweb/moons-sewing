@@ -67,3 +67,131 @@ body {
   display: flex;
   background-color: red;
 }
+
+.header .mainMenu {
+  display: flex;
+  list-style: none;
+}
+
+.header .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.header .mainMenu li a:hover {
+  background: yellow;
+}
+
+.header .openMenu {
+  font-size: 1.5rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.header .mainMenu .closeMenu , .icons i {
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
+.fa-facebook:hover {
+  color: rgb(8, 63, 216);
+}
+
+.fa-instagram:hover {
+  color: rgb(8, 63, 216);
+}
+
+@media (max-width: 600px) {
+  
+  .container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 0.1fr 2fr 0.15fr;
+    grid-template-rows: 3.5em 13em 22em 13em 2.7em 18em 3.5em;
+    gap: 1em 0px;
+    grid-template-areas:
+      "header header header"
+      ". title ."
+      ". services ."
+      ". about-us ."
+      ". learn-more ."
+      ". testimonials ."
+      "footer footer footer";
+  }
+
+  .header {
+    grid-area: header;
+    display: flex;
+    background-color: red;
+    align-items: left;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 360px;
+    font-weight: 300;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .title {
+    grid-area: title;
+    display: flex;
+    background-color: grey;
+  }
+
+  .header .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: #000;
+    transition: top 1s ease;
+    display: none;
+  }
+
+  .header .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .header .openMenu {
+    display: block;
+    margin-right: 0.8em;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top:auto;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .header .mainMenu li a:hover {
+    background: none;
+    color: yellow;
+    font-size: 1.6rem;
+  }
+
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+
+
+
+
+}
