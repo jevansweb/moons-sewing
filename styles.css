@@ -1,12 +1,9 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-image: url(/img/sewing-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: rgba(0,100,0,0.3)
 }
 
 .container {
@@ -126,11 +123,15 @@ body {
       "footer footer footer";
   }
 
+  
+
   .header {
     grid-area: header;
+    width: 100%;
+    height: 55px;
+    position: fixed;
     display: flex;
-    background-color: red;
-    align-items: left;
+    background-color: rgb(226, 226, 226);
   }
 
   .logo {
@@ -156,22 +157,25 @@ body {
     z-index: 10;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    background: #000;
+    text-align: center;
+    background: grey;
     transition: top 1s ease;
     display: none;
+    margin-top: 0;
+    padding-left: 0;
   }
 
   .header .mainMenu .closeMenu {
     display: block;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: white;
   }
 
   .header .openMenu {
     display: block;
-    margin-right: 0.8em;
     margin-left: auto;
     margin-bottom: auto;
     margin-top:auto;
@@ -180,15 +184,48 @@ body {
     align-content: center;
   }
 
+  .header .mainMenu li a {
+    background: none;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+
+  .header .mainMenu li .language {
+    background: rgb(37, 119, 151);
+    border: 2px solid black;
+    border-radius: 15px;
+    color: white;
+    padding: 3px 15px;
+    margin-bottom: 2em;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+
+  .header .mainMenu li .language:hover {
+    background: yellow;
+    border: 2px solid black;
+    color: black;
+    padding: 3px 15px;
+    margin-bottom: 2em;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 3rem;
+    transition-duration: 0.3s;
+  }
+
   .header .mainMenu li a:hover {
     background: none;
     color: yellow;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .icons i {
     display: inline-block;
     padding: 12px;
+    padding-top: 4rem;
+    font-size: 3rem;
   }
 
 
