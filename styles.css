@@ -26,25 +26,24 @@ body {
 .header {
   grid-area: header;
   display: flex;
-  background-color: red;
+  background: white;
+  border-bottom: 2px solid black;
 }
 
 .title {
   grid-area: title;
   display: flex;
-  background-color: grey;
+  background-color: none;
 }
 
 .services {
   grid-area: services;
   display: flex;
-  background-color: #928bb7;
 }
 
 .about-us {
   grid-area: about-us;
   display: flex;
-  background-color: grey;
 }
 
 .learn-more {
@@ -104,6 +103,10 @@ body {
   color: rgb(8, 63, 216);
 }
 
+.fa-bars:hover {
+  font-size: 1.15em;
+}
+
 @media (max-width: 600px) {
   
   .container {
@@ -111,19 +114,18 @@ body {
     height: 100vh;
     width: 100vw;
     grid-template-columns: 0.1fr 2fr 0.15fr;
-    grid-template-rows: 3.5em 13em 22em 13em 2.7em 18em 3.5em;
+    grid-template-rows: 3.5em 20em 70em 40em 18em 3.5em;
     gap: 1em 0px;
     grid-template-areas:
       "header header header"
       ". title ."
       ". services ."
       ". about-us ."
-      ". learn-more ."
       ". testimonials ."
       "footer footer footer";
   }
 
-  
+  /* HEADER & NAV CODE */
 
   .header {
     grid-area: header;
@@ -131,7 +133,6 @@ body {
     height: 55px;
     position: fixed;
     display: flex;
-    background-color: rgb(226, 226, 226);
   }
 
   .logo {
@@ -158,7 +159,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: grey;
+    background: lightblue;
     transition: top 1s ease;
     display: none;
     margin-top: 0;
@@ -171,7 +172,13 @@ body {
     top: 10px;
     right: 30px;
     font-size: 2.5rem;
-    color: white;
+    color: black;
+  }
+
+  .header .mainMenu .closeMenu:hover {
+    font-size: 2.8rem;
+    transform: rotate(90deg);
+    transition-duration: 0.5s;
   }
 
   .header .openMenu {
@@ -186,29 +193,32 @@ body {
 
   .header .mainMenu li a {
     background: none;
-    font-size: 1.7rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 800;
     line-height: 3rem;
+    font-family: "Carter One";
+    color: black;
+  }
+
+  .header .mainMenu .language-stroke {
+    background: url(img/brush-stroke-banner-7.png);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    margin-bottom: 4em;
   }
 
   .header .mainMenu li .language {
-    background: rgb(37, 119, 151);
-    border: 2px solid black;
+    background: none;
     border-radius: 15px;
     color: white;
-    padding: 3px 15px;
-    margin-bottom: 2em;
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 3rem;
+    font-family: "Carter One";
   }
 
   .header .mainMenu li .language:hover {
-    background: yellow;
-    border: 2px solid black;
-    color: black;
-    padding: 3px 15px;
-    margin-bottom: 2em;
+    color: rgb(255, 208, 0);
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 3rem;
@@ -217,8 +227,8 @@ body {
 
   .header .mainMenu li a:hover {
     background: none;
-    color: yellow;
-    font-size: 2rem;
+    font-size: 3.1rem;
+    transition-duration: 0.3s;
   }
 
   .icons i {
@@ -228,7 +238,124 @@ body {
     font-size: 3rem;
   }
 
+  .icons i:hover {
+    font-size: 3.3rem;
+    transition-duration: 0.3s;
+  }
 
+/* TITLE SECTION */
 
+.title {
+  grid-area: title;
+  display: flex;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2em 2em;
+  line-height: 7rem;
+}
+
+.title h1 {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 5rem;
+  font-family: "Carter One";
+}
+
+/* Services */
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0.5em 0;
+  gap: 3em;
+}
+
+.services .service-container {
+  display: block;
+  width: 350px;
+  height: auto;
+  align-items: center;
+}
+
+.services img {
+  display: block;
+  height: 250px;
+  width: 350px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.services p {
+  font-size: 1.7rem;
+  padding: 0;
+  line-height: 1.1em;
+  font-family: "Caveat";
+  font-weight: 500;
+  margin:auto;
+  color: black;
+  
+}
+
+.services .service-container .paint-stroke {
+  padding: 10px 41px;
+  background: url(/img/brush-stroke-banner-7-blue.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+  margin-top: 10px;
+}
+
+/* About Us Section */
+
+.about-us {
+  grid-area: about-us;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-us p {
+  display: inline-block;
+  font-family: "Caveat";
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.about-us .about-p3 {
+  display: inline-block;
+  border-radius: 15px;
+  width: 80vw;
+  align-self: center;
+  color: black;
+  padding: 5px;
+  margin-top: 0;
+  font-family: "Carter One" ;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.about-us .about-p3:hover {
+  display: inline-block;
+  border-radius: 15px;
+  width: 80vw;
+  align-self: center;
+  color: rgb(0, 54, 71);
+  padding: 5px;
+  margin-top: 0;
+  font-family: "Carter One" ;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
 
 }
