@@ -123,6 +123,7 @@ body {
       ". about-us ."
       ". testimonials ."
       "footer footer footer";
+      overflow-x: hidden;
   }
 
   /* HEADER & NAV CODE */
@@ -332,6 +333,13 @@ body {
   margin-top: 0;
 }
 
+.about-p2 {
+  display: inline-block;
+  font-family: "Caveat";
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 .about-us .about-p3 {
   display: inline-block;
   border-radius: 15px;
@@ -344,6 +352,8 @@ body {
   font-weight: 700;
   font-size: 1rem;
 }
+
+
 
 .about-us .about-p3:hover {
   display: inline-block;
