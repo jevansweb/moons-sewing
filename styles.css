@@ -164,6 +164,7 @@ body {
     background: lightblue;
     margin-top: 0;    
     padding-left: 0;
+    overflow: hidden;
   }
 
   .header .mainMenu .closeMenu {
