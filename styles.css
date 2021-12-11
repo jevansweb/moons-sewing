@@ -123,6 +123,7 @@ body {
       ". about-us ."
       ". testimonials ."
       "footer footer footer";
+      overflow: scroll;
   }
 
   /* HEADER & NAV CODE */
@@ -320,7 +321,6 @@ body {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 0.4em;
 }
 
 .about-us p {
