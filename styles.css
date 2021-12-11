@@ -136,11 +136,13 @@ body {
   }
 
   .logo {
-    display: inline-block;
-    width: 360px;
+    display: flex;
+    width: 80%;
+    max-width: 360px;
     font-weight: 300;
     font-size: 30px;
     cursor: pointer;
+    height: auto;
   }
   
   .title {
