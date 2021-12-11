@@ -113,7 +113,7 @@ body {
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: 0.1fr 2fr 0.15fr;
+    grid-template-columns: 0.15fr 2fr 0.15fr;
     grid-template-rows: 3.5em 20em 70em 40em 18em 3.5em;
     gap: 1em 0px;
     grid-template-areas:
@@ -320,6 +320,7 @@ body {
   align-content: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 0.4em;
 }
 
 .about-us p {
