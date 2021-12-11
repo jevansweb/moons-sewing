@@ -154,7 +154,7 @@ body {
   .header .mainMenu {
     height: 100vh;
     position: fixed;
-    top: -100%;
+    top: -150%;
     right: 0;
     left: 0;
     z-index: 10;
@@ -205,7 +205,7 @@ body {
     background: url(img/brush-stroke-banner-7.png);
     background-repeat: no-repeat;
     background-size: 100% 95%;
-    margin-bottom: 4em;
+    margin-bottom: 3vh;
   }
 
   .header .mainMenu li .language {
@@ -235,8 +235,8 @@ body {
   .icons i {
     display: inline-block;
     padding: 12px;
-    padding-top: 4rem;
     font-size: 3rem;
+    margin-top: 3vh;
   }
 
   .icons i:hover {
