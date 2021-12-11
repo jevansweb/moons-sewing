@@ -279,8 +279,9 @@ body {
 }
 
 .services .service-container {
-  display: block;
-  width: 350px;
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
   height: auto;
   align-items: center;
 }
@@ -288,29 +289,34 @@ body {
 .services img {
   display: flex;
   height: 250px;
-  width: 95%;
+  width: 100%;
   border: 1px solid black;
   border-radius: 20px;
 }
 
 .services p {
-  font-size: 1.7rem;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 15px 15px;
   line-height: 1.1em;
   font-family: "Caveat";
   font-weight: 500;
+  width: 95%;
   margin:auto;
   color: black;
   
 }
 
 .services .service-container .paint-stroke {
-  padding: 20px 41px;
+  display: flex;
+  padding: 30px auto;
   background: url(/img/brush-stroke-banner-7-blue.png);
   background-repeat: no-repeat;
-  background-size: 100% 90%;
+  background-size: 100% 100%;
   z-index: -1;
   margin-top: 10px;
+  width: 100%;
   justify-content: center;
 }
 
