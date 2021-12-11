@@ -133,7 +133,6 @@ body {
     height: 55px;
     position: fixed;
     display: flex;
-    z-index: 15;
   }
 
   .logo {
@@ -153,7 +152,7 @@ body {
   }
 
   .header .mainMenu {
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: -150%;
     right: 0;
