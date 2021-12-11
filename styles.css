@@ -275,7 +275,6 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0.5em 0;
   gap: 3em;
 }
 
@@ -287,7 +286,7 @@ body {
 }
 
 .services img {
-  display: block;
+  display: flex;
   height: 250px;
   width: 95%;
   border: 1px solid black;
@@ -306,12 +305,13 @@ body {
 }
 
 .services .service-container .paint-stroke {
-  padding: 10px 41px;
+  padding: 20px 41px;
   background: url(/img/brush-stroke-banner-7-blue.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 90%;
   z-index: -1;
   margin-top: 10px;
+  justify-content: center;
 }
 
 /* About Us Section */
