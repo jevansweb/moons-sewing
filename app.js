@@ -8,10 +8,11 @@ openMenu.addEventListener('click',show);
 closeMenu.addEventListener('click',close);
 
 function show(){
-    mainMenu.style.display = 'flex';
+    mainMenu.style.display ='flex';
     mainMenu.style.top = '0';
+    mainMenu.style.transition = 'top 1s ease';
 }
 
 function close(){
-    mainMenu.style.top = '-100%';
+    mainMenu.style.top = '-105%';
 }
