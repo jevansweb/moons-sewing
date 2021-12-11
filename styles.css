@@ -133,6 +133,7 @@ body {
     height: 55px;
     position: fixed;
     display: flex;
+    z-index: 15;
   }
 
   .logo {
