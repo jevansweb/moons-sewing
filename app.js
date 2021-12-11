@@ -13,5 +13,5 @@ function show(){
 }
 
 function close(){
-    mainMenu.style.top = '-105%';
+    mainMenu.style.top = '-100%';
 }
