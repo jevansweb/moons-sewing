@@ -6,106 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-
-  grid-template-columns: 0.1fr 2fr 0.1fr;
-  grid-template-rows: 3.5em 13em 22em 13em 2.7em 18em 3.5em;
-  gap: 1em 0px;
-  grid-template-areas:
-    "header header header"
-    ". title ."
-    ". services ."
-    ". about-us ."
-    ". learn-more ."
-    ". testimonials ."
-    "footer footer footer";
-}
-.header {
-  grid-area: header;
-  display: flex;
-  background: white;
-  border-bottom: 2px solid black;
-}
-
-.title {
-  grid-area: title;
-  display: flex;
-  background-color: none;
-}
-
-.services {
-  grid-area: services;
-  display: flex;
-}
-
-.about-us {
-  grid-area: about-us;
-  display: flex;
-}
-
-.learn-more {
-  grid-area: learn-more;
-  display: flex;
-  background-color: lightblue;
-}
-
-.testimonials {
-  grid-area: testimonials;
-  display: flex;
-  background-color: purple;
-}
-
-.footer {
-  grid-area: footer;
-  display: flex;
-  background-color: red;
-}
-
-.header .mainMenu {
-  display: flex;
-  list-style: none;
-}
-
-.header .mainMenu li a {
-  display: inline-block;
-  padding: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.header .mainMenu li a:hover {
-  background: yellow;
-}
-
-.header .openMenu {
-  font-size: 1.5rem;
-  margin: 20px;
-  display: none;
-  cursor: pointer;
-}
-
-.header .mainMenu .closeMenu , .icons i {
-  font-size: 1.5rem;
-  display: none;
-  cursor: pointer;
-}
-
-.fa-facebook:hover {
-  color: rgb(8, 63, 216);
-}
-
-.fa-instagram:hover {
-  color: rgb(8, 63, 216);
-}
-
-.fa-bars:hover {
-  font-size: 1.15em;
-}
 
 @media (max-width: 600px) {
   
@@ -114,17 +14,16 @@ body {
     height: 100vh;
     width: 100vw;
     grid-template-columns: 3% 94% 3%;
-    grid-template-rows: 3.5em 20em 70em 40em 18em 3.5em;
+    grid-template-rows: 3.5em 20em 70em 40em 30em 4em;
     gap: 1em 0px;
     grid-template-areas:
       "header header header"
       ". title ."
-      ". services ."
+      "services services services"
       ". about-us ."
-      ". testimonials ."
+      ". mini-gallery ."
       "footer footer footer";
       overflow-x: hidden;
-      margin: auto;
   }
 
   /* HEADER & NAV CODE */
@@ -135,6 +34,8 @@ body {
     height: 55px;
     position: fixed;
     display: flex;
+    border-bottom: 2px solid black;
+    background-color: white;
   }
 
   .logo {
@@ -154,6 +55,7 @@ body {
   }
 
   .header .mainMenu {
+    display: flex;
     height: 100%;
     position: fixed;
     top: -150%;
@@ -167,6 +69,7 @@ body {
     margin-top: 0;    
     padding-left: 0;
     overflow: hidden;
+    list-style: none;
   }
 
   .header .mainMenu .closeMenu {
@@ -176,6 +79,7 @@ body {
     right: 30px;
     font-size: 2.5rem;
     color: black;
+    cursor: pointer;
   }
 
   .header .mainMenu .closeMenu:hover {
@@ -192,6 +96,9 @@ body {
     font-size: 2.5rem;
     justify-content: center;
     align-content: center;
+    margin-right: 20px;
+    cursor: pointer;
+    
   }
 
   .header .mainMenu li a {
@@ -201,6 +108,10 @@ body {
     line-height: 3rem;
     font-family: "Carter One";
     color: black;
+    display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
   }
 
   .header .mainMenu .language-stroke {
@@ -244,6 +155,23 @@ body {
   .icons i:hover {
     font-size: 3.3rem;
     transition-duration: 0.3s;
+    cursor: pointer;
+  }
+
+  .fa-facebook:hover {
+    color: rgb(8, 63, 216);
+  }
+
+  .fa-instagram:hover {
+    color: rgb(8, 63, 216);
+  }
+  
+  .fa-bars {
+    font-size: 1em;
+  }
+
+  .fa-bars:hover {
+    font-size: 1.10em;
   }
 
 /* TITLE SECTION */
@@ -260,7 +188,6 @@ body {
 }
 
 .title h1 {
-  grid-area: title;
   display: flex;
   flex-direction: column;
   color: black;
@@ -271,6 +198,7 @@ body {
 /* Services */
 
 .services {
+  grid-area: services;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,7 +229,7 @@ body {
   padding: 15px 15px;
   line-height: 1.1em;
   font-family: "Caveat";
-  font-weight: 500;
+  font-weight: 600;
   width: 95%;
   margin:auto;
   color: black;
@@ -352,21 +280,6 @@ body {
   border-radius: 15px;
   width: 80vw;
   align-self: center;
-  color: black;
-  padding: 5px;
-  margin-top: 0;
-  font-family: "Carter One" ;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-
-
-.about-us .about-p3:hover {
-  display: inline-block;
-  border-radius: 15px;
-  width: 80vw;
-  align-self: center;
   color: rgb(0, 54, 71);
   padding: 5px;
   margin-top: 0;
@@ -375,6 +288,63 @@ body {
   font-size: 1.2rem;
   transition-duration: 0.3s;
   cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 0px 2px 4px black;
 }
 
+/* Carousel / Mini-Gallery */
+
+.mini-gallery {
+  grid-area: mini-gallery;
+  display: flex;
+  background-color: purple;
+  margin: 2em 0;
+  margin-bottom: 100px;
+}
+
+.carousel_images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel_track-container {
+  background-color: lightgreen;
+  height: 100%;
+  position: relative;
+}
+
+.carousel_track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel_slide {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel_button {
+  top: 50%;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel_button i {
+  font-size: 2rem;
+}
+
+
+/* Footer */
+
+
+footer {
+  grid-area: footer;
+  display: flex;
+  background-color: red;
+  width: 100%;
+}
 }
