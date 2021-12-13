@@ -319,7 +319,7 @@ section .about-us {
 .carousel {
   display: flex;
   position: relative;
-  height: 340px;
+  height: 40vh;
   width: 85%;
   margin: 0 auto;
   max-width: 380px;
