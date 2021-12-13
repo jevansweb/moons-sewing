@@ -45,7 +45,7 @@ body {
     font-size: 30px;
     cursor: pointer;
     margin-left: auto;
-    min-width: 100px;
+    min-width: 50px;
   }
   
   .title {
