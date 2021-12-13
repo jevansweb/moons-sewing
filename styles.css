@@ -124,7 +124,7 @@ body {
     background-size: 100% 95%;
     margin-bottom: 3vh;
     max-width: 450px;
-    width: 450px;
+    width: 100%;
   }
 
   .header .mainMenu li .language {
