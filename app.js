@@ -41,6 +41,7 @@ slides.forEach(setSlidePosition);
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    track.style.transition = 'transform 0.8s ease';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 }
@@ -61,6 +62,8 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
         prevButton.classList.remove('is-hidden');
         nextButton.classList.remove('is-hidden');
     }
+
+    
 }
 
 

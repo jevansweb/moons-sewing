@@ -799,7 +799,7 @@ footer p {
   list-style: none;
   height: 100%;
   position: relative;
-  transition: transform 250ms ease-in;
+  transition: transform 250ms ease;
 }
 
 .carousel_slide {
