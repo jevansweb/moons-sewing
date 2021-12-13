@@ -45,7 +45,6 @@ body {
     font-size: 30px;
     cursor: pointer;
     margin-left: auto;
-    min-width: 50px;
   }
   
   .title {
@@ -96,7 +95,7 @@ body {
     font-size: 2.5rem;
     justify-content: center;
     align-content: center;
-    margin-right: 20px;
+    margin-right: 3%;
     cursor: pointer;
     
   }
