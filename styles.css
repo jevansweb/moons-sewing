@@ -6,6 +6,15 @@ body {
   overflow-x: hidden;
 }
 
+a:link, a:visited {
+  color: blue;
+}
+
+a.current:link, a.current:visited {
+  color: white;
+  background-color: blue;
+}
+
 
 @media (max-width: 600px) {
   
@@ -543,11 +552,18 @@ footer p {
     font-weight: 800;
     line-height: 3rem;
     font-family: "Carter One";
-    color: black;
     display: inline-block;
   padding: 15px;
   text-decoration: none;
   text-transform: uppercase;
+  }
+
+  .header .mainMenu a:link, a:visited {
+    color: black;
+  }
+
+  .header .mainMenu a.current:link, a.current:visited {
+    color: rgb(8, 63, 216);
   }
 
   .header .mainMenu .language-stroke {
@@ -579,7 +595,6 @@ footer p {
   }
 
   .header .mainMenu li a:hover {
-    color: rgb(8, 63, 216);
     background: none;
     font-size: 3.1rem;
     transition-duration: 0.3s;
@@ -614,6 +629,8 @@ footer p {
   .fa-bars:hover {
     font-size: 1.10em;
   }
+
+  
 
 /* TITLE SECTION */
 
