@@ -197,10 +197,6 @@ body {
     font-size: 1.10em;
   }
 
-  .header .mainMenu a:link, a:visited {
-    color: black;
-  }
-
   .header .mainMenu .current {
     color: rgb(8, 63, 216);
   }
@@ -606,9 +602,6 @@ footer p {
   text-transform: uppercase;
   }
 
-  .header .mainMenu a:link, a:visited {
-    color: black;
-  }
 
   .header .mainMenu .current {
     color: rgb(8, 63, 216);
