@@ -498,9 +498,9 @@ footer p {
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: 3% 94% 3%;
-    grid-template-rows: 3.5em auto auto 4em;
-    gap: 2em 0px;
+    grid-auto-rows: minmax(100px, fit-content);
+    grid-template-rows: 3.5em 10em;
+    gap: 3em 0px;
     grid-template-areas:
       "header header header"
       ". title ."
