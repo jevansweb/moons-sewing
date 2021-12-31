@@ -6,31 +6,37 @@ body {
   overflow-x: hidden;
 }
 
-a:link, a:visited {
-  color: blue;
-}
-
-a.current:link, a.current:visited {
-  color: white;
-  background-color: blue;
-}
-
 
 @media (max-width: 600px) {
   
-  .container {
+  .indexGrid {
     display: grid;
     height: 100vh;
     width: 100vw;
     grid-template-columns: 3% 94% 3%;
-    grid-template-rows: 3.5em 20em 70em 40em 35em 4em;
-    gap: 4em 0px;
+    grid-template-rows: 3.5em 15em 70em 40em 35em 4em;
+    gap: 3em 0px;
     grid-template-areas:
       "header header header"
       ". title ."
       "services services services"
       ". about-us ."
       ". mini-gallery ."
+      "footer footer footer";
+      overflow-x: hidden;
+  }
+
+  .aboutGrid {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 3% 94% 3%;
+    grid-template-rows: 3.5em 7.5em 47em 4em;
+    gap: 2em 0;
+    grid-template-areas:
+      "header header header"
+      ". title ."
+      ". about-us ."
       "footer footer footer";
       overflow-x: hidden;
   }
@@ -189,6 +195,14 @@ a.current:link, a.current:visited {
     font-size: 1.10em;
   }
 
+  .header .mainMenu a:link, a:visited {
+    color: black;
+  }
+
+  .header .mainMenu .current {
+    color: rgb(8, 63, 216);
+  }
+
 /* TITLE SECTION */
 
 .title {
@@ -198,8 +212,9 @@ a.current:link, a.current:visited {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2em 2em;
+  padding: 0em 0em;
   line-height: 7rem;
+  height: fit-content;
 }
 
 .title h1 {
@@ -208,6 +223,7 @@ a.current:link, a.current:visited {
   color: black;
   font-size: 5rem;
   font-family: "Carter One";
+  margin: 0;
 }
 
 /* Services */
@@ -275,7 +291,6 @@ a.current:link, a.current:visited {
   justify-content: center;
   flex-direction: column;
   padding: 0 5vw;
-  margin-top: 10px;
 }
 
 section .about-us {
@@ -283,6 +298,14 @@ section .about-us {
   align-items: center;
   justify-content: center;
   margin: auto;
+  
+}
+
+.about-us section {
+  border: 1px  solid black;
+  border-radius: 8px;
+  box-shadow: 6px 6px 10px black;
+  padding: 0 1em;
 }
 
 .about-us p {
@@ -290,14 +313,16 @@ section .about-us {
   font-family: "Caveat";
   font-size: 2rem;
   font-weight: 500;
-  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .about-p3 {
   max-width: 754px;
+  
+  
 }
 
-.about-us .about-p4 {
+.about-us .about-p4 a {
   display: block;
   border-radius: 15px;
   width: fit-content;
@@ -307,10 +332,16 @@ section .about-us {
   font-family: "Carter One" ;
   font-weight: 700;
   font-size: 1.2rem;
-  transition-duration: 0.3s;
+  
   cursor: pointer;
   border: 1px solid black;
   box-shadow: 0px 2px 4px black;
+  text-decoration: none;
+}
+
+.about-us .about-p4 a:hover {
+  color: rgb(8, 63, 216);
+  font-size: 1.21rem;
 }
 
 /* Carousel / Mini-Gallery */
@@ -320,7 +351,6 @@ section .about-us {
   flex-direction: column;
   grid-area: mini-gallery;
   margin: 0 0;
-  margin-bottom: 100px;
   align-items: center;
   justify-content: center;
 }
@@ -446,19 +476,35 @@ footer p {
 
 @media (min-width: 601px) {
   
-  .container {
+  .indexGrid{
     display: grid;
     height: 100vh;
     width: 100vw;
     grid-template-columns: 3% 94% 3%;
-    grid-template-rows: 3.5em fit-content fit-content 40em 35em 4em;
-    gap: 8em 0px;
+    grid-auto-rows: minmax(100px, fit-content);
+    grid-template-rows: 3.5em 10em;
+    gap: 4em 0px;
     grid-template-areas:
       "header header header"
       ". title ."
       "services services services"
       ". about-us ."
       ". mini-gallery ."
+      "footer footer footer";
+      overflow-x: hidden;
+  }
+
+  .aboutGrid {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 3% 94% 3%;
+    grid-template-rows: 3.5em auto auto 4em;
+    gap: 2em 0px;
+    grid-template-areas:
+      "header header header"
+      ". title ."
+      ". about-us ."
       "footer footer footer";
       overflow-x: hidden;
   }
@@ -562,7 +608,7 @@ footer p {
     color: black;
   }
 
-  .header .mainMenu a.current:link, a.current:visited {
+  .header .mainMenu .current {
     color: rgb(8, 63, 216);
   }
 
@@ -641,8 +687,9 @@ footer p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2em 2em;
   line-height: 7rem;
+  height: 150px;
+  margin: 0;
 }
 
 .title h1 {
@@ -664,7 +711,6 @@ footer p {
   text-align: center;
   justify-content: center;
   gap: 3em 1em;
-  margin-top: -5em;
 }
 
 .services .service-container {
@@ -733,6 +779,13 @@ footer p {
   width: fit-content;
 }
 
+.about-us section {
+  border: 1px  solid black;
+  border-radius: 8px;
+  box-shadow: 6px 6px 10px black;
+  padding: 0 1em;
+}
+
 .about-us p {
   display: inline-block;
   font-family: "Caveat";
@@ -740,6 +793,7 @@ footer p {
   font-weight: 500;
   margin-top: 0;
   max-width: 754px;
+  
 }
 
 .about-p2 {
@@ -754,7 +808,7 @@ footer p {
   max-width: 754px;
 }
 
-.about-us .about-p4 {
+.about-us .about-p4 a {
   display: block;
   border-radius: 15px;
   width: fit-content;
@@ -764,10 +818,16 @@ footer p {
   font-family: "Carter One" ;
   font-weight: 700;
   font-size: 1.2rem;
-  transition-duration: 0.3s;
+  
   cursor: pointer;
   border: 1px solid black;
   box-shadow: 0px 2px 4px black;
+  text-decoration: none;
+}
+
+.about-us .about-p4 a:hover {
+  color: rgb(8, 63, 216);
+  font-size: 1.21rem;
 }
 
 /* Carousel / Mini-Gallery */
@@ -777,7 +837,6 @@ footer p {
   flex-direction: column;
   grid-area: mini-gallery;
   margin: 2em 0;
-  margin-bottom: 100px;
   align-items: center;
   justify-content: center;
 }

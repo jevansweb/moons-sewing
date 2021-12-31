@@ -20,6 +20,28 @@ function close(){
 }
 
 
+// Current Menu Class
+
+const currentLocation = location.href;
+const menuItems = document.querySelectorAll('a');
+const menuLength = menuItems.length;
+
+for (i = 0; i<menuLength; i++) {
+    if (menuItems[i].href === currentLocation){
+        menuItems[i].className = "current";
+    }
+
+    else {
+        menuItems[i].className.remove = "current";
+    }
+}
+
+
+console.log(menuItems);
+
+
+
+
 /* Carousel JS */
 
 const track = document.querySelector('.carousel_track');
