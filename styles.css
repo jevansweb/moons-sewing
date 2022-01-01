@@ -135,30 +135,33 @@ body {
   }
 
   .header .mainMenu .language-stroke {
+    display: flex;
     margin: 0 auto;
     background: url(img/brush-stroke-banner-7.png);
     background-repeat: no-repeat;
     background-size: 100% 95%;
     margin-bottom: 3vh;
-    max-width: 450px;
-    width: 100%;
+    max-width: 400px;
+    width: 90%;
+    justify-content: center;
   }
 
   .header .mainMenu li .language {
     background: none;
     border-radius: 15px;
     color: white;
-    font-size: 1.3rem;
+    font-size: 22px;
     font-weight: 600;
-    line-height: 3rem;
+    line-height: 2rem;
     font-family: "Carter One";
+    padding: 10px 0;
+    width: 70%;
   }
 
   .header .mainMenu li .language:hover {
     color: rgb(255, 208, 0);
-    font-size: 1.4rem;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 3rem;
     transition-duration: 0.3s;
   }
 
@@ -597,6 +600,7 @@ footer p {
     line-height: 3rem;
     font-family: "Carter One";
     display: inline-block;
+    color: black;
   padding: 15px;
   text-decoration: none;
   text-transform: uppercase;
