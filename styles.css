@@ -497,7 +497,7 @@ footer p {
 .gallery .img-container {
   height: 100px;
   width: 100px;
-  background-color: green;
+  color: black;
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 5px 5px 5px #888888;
@@ -507,7 +507,46 @@ footer p {
   object-fit:cover;
   width: 100%;
   height: 100%;
+  transition: 0.3s;
 }
+
+.gallery .img-container .g-img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 1em;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
 
 
 
