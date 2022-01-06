@@ -37,8 +37,6 @@ for (i = 0; i<menuLength; i++) {
 }
 
 
-console.log(menuItems);
-
 
 
 
@@ -135,3 +133,5 @@ hideShowArrows(slides, prevButton, nextButton, targetIndex);
 
     
 })
+
+

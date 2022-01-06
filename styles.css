@@ -503,47 +503,88 @@ footer p {
   box-shadow: 5px 5px 5px #888888;
 }
 
-.gallery .img-container .g-img {
+.gallery .img-container img {
   object-fit:cover;
   width: 100%;
   height: 100%;
   transition: 0.3s;
 }
 
-.gallery .img-container .g-img:hover {
+.gallery .img-container img:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
 .modal {
-  display: none;
+  opacity: 0;
   position: fixed;
-  z-index: 1;
-  padding-top: 1em;
-  top: 0;
+  top: 50px;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.9);
+  z-index: -1;
 }
 
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+  max-height: 75vh;
+  width: auto;
+  object-fit: contain;
+  max-width: 80%;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.modal.appear {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.modal.appear img{
+  animation: zoom 0.3s linear;
+}
+
+@keyframes zoom {
+  0% {scale: 0.5;}
+  100%{scale: 1;}
 }
 
 .caption {
-  margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  margin-top: 20px;
+  height: 5vh;
+  min-height: 44px;
+  font-family: "Caveat";
+  font-size: 2.5rem;
+  justify-content: center;
+  line-height: 1em;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  transform: rotate(90deg)
 }
 
 
@@ -1016,7 +1057,7 @@ footer p {
 .is-hidden {display: none;}
 
 
-/* Gallery for Mobile */
+/* Gallery for Desktop */
 
 .galleryGrid {
   display: grid;
@@ -1052,47 +1093,90 @@ footer p {
   box-shadow: 5px 5px 5px #888888;
 }
 
-.gallery .img-container .g-img {
+.img-container img {
   object-fit:cover;
   width: 100%;
   height: 100%;
   transition: 0.3s;
 }
 
-.gallery .img-container .g-img:hover {
+.gallery .img-container img:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 
+/* Modal CSS */
+
 .modal {
-  display: none;
+  opacity: 0;
   position: fixed;
-  z-index: 1;
-  padding-top: 1em;
-  top: 0;
+  top: 55px;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.9);
+  z-index: -1;
 }
 
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+  max-height: 75vh;
+  width: auto;
+  object-fit: contain;
+  max-width: 80%;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.modal.appear {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.modal.appear img{
+  animation: zoom 0.3s linear;
+}
+
+@keyframes zoom {
+  0% {scale: 0.5;}
+  100%{scale: 1;}
 }
 
 .caption {
-  margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  margin-top: 20px;
+  height: 5vh;
+  min-height: 44px;
+  font-family: "Caveat";
+  font-size: 2.5rem;
+  justify-content: center;
+  line-height: 1em;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  transform: rotate(90deg)
 }
 
 /* Footer */
