@@ -1,1 +1,2 @@
 moons-sewing/img/uploads/* filter=lfs diff=lfs merge=lfs -text
+moons-sewing/img/uploads/** filter=lfs diff=lfs merge=lfs -text
