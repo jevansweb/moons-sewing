@@ -21,7 +21,7 @@
     <title>Contact Us!</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container contactGrid">
         <div class="header">
             <img src="img/Medium_Logo_Photoshop.png" alt="Main Logo" class="logo">
             <div class="openMenu"><i class="fa fa-bars"></i></div>
@@ -38,68 +38,69 @@
                 </span>
             </ul>
         </div>
-        <div class="title"><h1>MOONS' SEWING</h1></div>
-        <div class="services">
-            <div class="service-container">
-                <img src="img/samoan-fabric.jpg" alt="IMG1">
-                <div class="paint-stroke">
-                    <p>Traditional Samoan Clothing</p>
-                </div>
-            </div>
-            <div class="service-container">
-                <img src="img/pexels-pixabay-461035.jpg" alt="IMG2">
-                <div class="paint-stroke">
-                    <p>Alterations, zips, patching & more!</p>
-                </div>
-            </div>
-            <div class="service-container">
-                <img src="img/pexels-pixabay-37631.jpg" alt="IMG3">
-                <div class="paint-stroke">
-                    <p>Customer orders.<br>Please enquire within!</p>
-                </div>  
-            </div>
-        </div>
-        <div class="about-us">
+        <div class="title"><h1>Contact Us!</h1></div>
+        <div class="form">
             <section>
-                <p class="about-p1">Hi, Welcome to Moons' sewing.</p>
-                <p class="about-p2">We offer a variety of Samoan clothing including puletasi's, lava-lava's, masks and various other items on request. </p>
-                <p class="about-p3">We also offer adjustments, pleating, hemming, zip fitting and more.</p>
-                <p class="about-p4">Please see the about page for more information!</p>
+                <form action="action_page.php">
+                    <div class="row twoCol">
+                        <div class="col-25">
+                            <label for="fname">First Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                        <div class="col-25">
+                            <label for="lname">Last Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-70">
+                            <label for="due-date">Latest Date for Completion</label>
+                        </div>
+                        <div class="col-30">
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="suburb">Suburb</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="suburb" placeholder="Your suburb..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="postcode">Postcode</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="postcode" placeholder="Postcode..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="email" name="email" placeholder="Your email..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea name="subject" id="subject" placeholder="Please write your enquiry here.." style="height: 200px;"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
             </section>
-        </div>
-        <div class="learn-more"></div>
-        <div class="mini-gallery">
-            
-            <div class="carousel">
-                <button class="carousel_button-left is-hidden">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="carousel_track-container">
-                    <ul class="carousel_track">
-                        <li class="carousel_slide current-slide">
-                            <img class="carousel_images" src="img/samoan-fabric.jpg" alt=""></li>
-                        <li class="carousel_slide">
-                            <img class="carousel_images" src="img/pexels-pixabay-461035.jpg" alt=""></li>
-                        <li class="carousel_slide">
-                            <img class="carousel_images" src="img/sewing-bg.jpg" alt=""></li>
-                        <li class="carousel_slide">
-                            <img class="carousel_images" src="img/samoan-fabric.jpg" alt=""></li>
-                        <li class="carousel_slide">
-                            <img class="carousel_images" src="img/pexels-pixabay-461035.jpg" alt=""></li>
-                    </ul>
-                </div>
-                <button class="carousel_button-right">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-
-            <div class="carousel_nav">
-                <button class="carousel_indicator current-slide"></button>
-                <button class="carousel_indicator"></button>
-                <button class="carousel_indicator"></button>
-                <button class="carousel_indicator"></button>
-                <button class="carousel_indicator"></button>
-            </div>
         </div>
         <footer>
             <p>© 2021 Moons' Sewing</p>
