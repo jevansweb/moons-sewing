@@ -137,7 +137,7 @@ body {
   .header .mainMenu .language-stroke {
     display: flex;
     margin: 0 auto;
-    background: url(img/brush-stroke-banner-7.png);
+    background: url(img/uploads/brush-stroke-banner-7.png);
     background-repeat: no-repeat;
     background-size: 100% 95%;
     margin-bottom: 3vh;
@@ -273,7 +273,7 @@ body {
 .services .service-container .paint-stroke {
   display: flex;
   padding: 30px auto;
-  background: url(/img/brush-stroke-banner-7-blue.png);
+  background: url(/img/uploads/brush-stroke-banner-7-blue.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: -1;
@@ -844,7 +844,7 @@ footer p {
 
   .header .mainMenu .language-stroke {
     margin: 0 auto;
-    background: url(img/brush-stroke-banner-7.png);
+    background: url(img/uploads/brush-stroke-banner-7.png);
     background-repeat: no-repeat;
     background-size: 100% 95%;
     margin-bottom: 3vh;
@@ -978,7 +978,7 @@ footer p {
 .services .service-container .paint-stroke {
   display: flex;
   padding: 30px auto;
-  background: url(/img/brush-stroke-banner-7-blue.png);
+  background: url(/img/uploads/brush-stroke-banner-7-blue.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: -1;
