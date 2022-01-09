@@ -49,6 +49,8 @@ const prevButton = document.querySelector('.carousel_button-left');
 const dotsNav = document.querySelector('.carousel_nav');
 const dots = Array.from(dotsNav.children);
 
+console.log(slides)
+
 const slideWidth = slides[0].getBoundingClientRect().width;
 
 // arrange the slides next to one another
@@ -134,4 +136,26 @@ hideShowArrows(slides, prevButton, nextButton, targetIndex);
     
 })
 
+// UPDATE LIVE TITLE
 
+const homeHeader = document.querySelector('.homeTitle h1')
+const liveHeader = document.querySelector('.currentTitle')
+
+
+window.addEventListener('DOMContentLoaded', function() {
+    liveHeader.innerHTML = homeHeader.innerHTML
+ });
+
+
+// ON SUBMIT UPDATE CURRENT TITLE ON PAGE
+
+
+const submitButton = document.querySelector('.titleSubmit')
+
+submitButton.addEventListener('click', function() {
+    const titleInputText = document.querySelector('.newTitleInput').value;
+    
+    homeHeader.innerHTML = titleInputText;
+
+    console.log(homeHeader)
+})
